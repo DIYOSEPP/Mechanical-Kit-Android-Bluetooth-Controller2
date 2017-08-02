@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context="com.osepp.remote.controlActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        tools:context=".controlActivity">
+
+        <RelativeLayout
+            android:id="@+id/dirButtons"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="160dp"
+            android:layout_marginLeft="20dp">
+
+            <com.osepp.remote.DirButtonView
+                android:id="@+id/btn_down"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="false"
+                android:layout_marginBottom="15dp"
+                android:rotation="270"
+                android:text="D"
+                android:textColor="#ff0000"
+                android:textSize="36sp" />
+
+            <com.osepp.remote.DirButtonView
+                android:id="@+id/btn_up"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:rotation="90"
+                android:text="U"
+                android:textColor="#FF0000"
+                android:textSize="36sp" />
+
+            <com.osepp.remote.DirButtonView
+                android:id="@+id/btn_right"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:rotation="180"
+                android:text="R"
+                android:textColor="#ff0000"
+                android:textSize="36sp" />
+
+            <com.osepp.remote.DirButtonView
+                android:id="@+id/btn_left"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:text="L"
+                android:textColor="#ff0000"
+                android:textSize="36sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/funkeys"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="160dp"
+            android:layout_marginRight="20dp">
+
+            <com.osepp.remote.FunButtonView
+                android:id="@+id/btn_a"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="false"
+                android:layout_marginBottom="6dp"
+                android:textColor="#ff0000"
+                android:textSize="36sp"
+                android:rotation="45"
+                android:text="A" />
+
+            <com.osepp.remote.FunButtonView
+                android:id="@+id/btn_y"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:rotation="45"
+                android:textColor="#ff0000"
+                android:textSize="36sp"
+                android:text="Y" />
+
+            <com.osepp.remote.FunButtonView
+                android:id="@+id/btn_b"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:rotation="45"
+                android:textColor="#ff0000"
+                android:textSize="36sp"
+                android:text="B" />
+
+            <com.osepp.remote.FunButtonView
+                android:id="@+id/btn_x"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:rotation="45"
+                android:textColor="#ff0000"
+                android:textSize="36sp"
+                android:text="X" />
+        </RelativeLayout>
+
+        <com.osepp.remote.JoyView
+            android:id="@+id/joy_left"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="100dp" />
+
+        <com.osepp.remote.JoyView
+            android:id="@+id/joy_right"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="100dp" />
+
+        <com.osepp.remote.MsgView
+            android:id="@+id/msgbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/joy_left"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/funkeys"
+            android:layout_toRightOf="@+id/dirButtons"
+            android:gravity="bottom"
+            android:padding="5dp"
+            android:text="Serial.print(display here)\n"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+</FrameLayout>

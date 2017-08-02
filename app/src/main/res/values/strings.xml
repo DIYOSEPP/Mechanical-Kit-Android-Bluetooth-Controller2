@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">oseppRemote</string>
+    <string name="title_activity_control">controlActivity</string>
+</resources>
